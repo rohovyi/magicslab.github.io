@@ -1,0 +1,49 @@
+body {
+    position        : relative;
+    background-color: $color-official;
+    font-family     : $ff__main;
+    font-size       : 24px;
+    line-height     : 36px;
+    letter-spacing  : 0em;
+    text-align      : left;
+    margin          : $zero;
+}
+
+.container {
+    max-width         : 1440px;
+    margin            : 0 auto;
+    -webkit-box-sizing: border-box;
+    box-sizing        : border-box;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.__list_star {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    &-star {
+        margin-right: .25rem;
+    }
+}
+
+.__ice-frame {
+    position  : absolute;
+    text-align: center;
+    width     : 240px;
+    height    : 240px;
+    padding   : $rem;
+
+    p {
+        font-size     : 32px;
+        line-height   : 32px;
+        letter-spacing: 0em;
+        text-align    : center;
+        text-transform: uppercase;
+        color         : $color-brand;
+        padding       : $rem*2;
+    }
+}

@@ -1,0 +1,15 @@
+nav.__nav
+    .__nav-links
+        .__nav-logo The Magic Slab
+        - var items = ['menu', 'find us']
+        - var dataItems=['menu', 'find']
+            each item, key in items 
+                a.__nav-item(href='#' data-link=dataItems[key])= item
+        .__nav-button 
+            a(href='#').__btn.__btn-nav contact us
+    .__nav-logo The Magic Slab
+    .__nav-button 
+        a(href='#').__btn.__btn-nav contact us
+    .__nav-collapse.__nav-menu_button
+        .__nav-menu_lines
+    .__nav_overlay

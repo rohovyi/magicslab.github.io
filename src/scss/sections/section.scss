@@ -1,0 +1,195 @@
+section:nth-child(2) {
+    .container {
+        display              : -ms-grid;
+        display              : grid;
+        -ms-grid-columns     : 1fr;
+        grid-template-columns: 1fr;
+        text-align           : center;
+    }
+
+    h2 {
+        font-size     : 31px;
+        line-height   : 48px;
+        letter-spacing: 0em;
+        color         : $color-brand;
+        margin        : auto;
+    }
+
+    .__list-brand {
+        -ms-grid-column     : 1;
+        -ms-grid-column-span: 1;
+        grid-column         : 1/2;
+        display             : -webkit-box;
+        display             : -ms-flexbox;
+        display             : flex;
+        -webkit-box-pack    : justify;
+        -ms-flex-pack       : justify;
+        justify-content     : space-between;
+        -ms-flex-wrap       : wrap;
+        flex-wrap           : wrap;
+
+        img {
+            height: 80px;
+            width : auto;
+        }
+    }
+}
+
+section:nth-child(3) {
+    background-color: $color-tecnical;
+
+    .container {
+        display: -ms-grid;
+        display: grid;
+        padding: 0;
+
+        ul {
+            border-top  : 2px $color-brand solid;
+            border-right: 2px $color-brand solid;
+            border-left : 2px $color-brand solid;
+            display     : -ms-grid;
+            display     : grid;
+            margin      : 0;
+        }
+
+        h2 {
+            font-size  : 53px;
+            line-height: 77px;
+            color      : $color-brand;
+        }
+
+        img {
+            width : $rate;
+            height: $rate;
+        }
+    }
+}
+
+section:nth-child(4) {
+    border          : 1px $color-brand solid;
+    background-color: $color-brand;
+    color           : white;
+    height          : auto;
+    max-height      : 896px;
+
+    .container {
+        position: relative;
+        height  : $rate;
+    }
+
+    h2 {
+        position      : absolute;
+        font-family   : $ff__main-l;
+        font-size     : 8.211143695014663vw;
+        line-height   : 12.316715542521994vw;
+        text-transform: uppercase;
+        text-align    : center;
+        top           : calc($rate / 5);
+    }
+
+    .__box {
+        display              : -ms-grid;
+        display              : grid;
+        -ms-grid-columns     : 1fr $rem 1fr $rem 1fr $rem 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap             : $rem;
+    }
+
+    span {
+        font-size     : 3.5190615835777126vw;
+        line-height   : 4.545454545454546vw;
+        letter-spacing: 0em;
+        text-align    : left !important;
+    }
+}
+
+section:nth-child(5) {
+    .container {
+        position  : relative;
+        border-top: 1px $color-tecnical solid;
+        background: url(../../img/milkshakes.svg) center/cover no-repeat;
+        height    : 800px;
+        text-align: center;
+    }
+
+    .__title {
+        display         : -webkit-box;
+        display         : -ms-flexbox;
+        display         : flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack   : center;
+        justify-content : center;
+        font-size       : 3.5190615835777126vw;
+        line-height     : 6.3049853372434015vw;
+        letter-spacing  : 0em;
+
+        h2::before {
+            content       : 'new';
+            color         : $color-brand;
+            text-transform: uppercase;
+
+        }
+    }
+
+    .__text {
+        display: -ms-grid;
+        display: grid;
+    }
+
+    .__ice-frame {
+        right: 0;
+        top  : 0;
+
+    }
+}
+
+section:nth-child(6) {
+    .container {
+        background: url(../../img/bg-font.png) center/cover no-repeat;
+        display   : -ms-grid;
+        display   : grid;
+        padding   : $rem;
+
+        figure {
+            position: relative;
+            margin  : 0;
+
+            img {
+                width: $rate;
+            }
+        }
+    }
+
+    .__title {
+        h2 {
+            font-size     : 8.211143695014663vw;
+            line-height   : 6.5982404692082115vw;
+            letter-spacing: 0em;
+            text-align    : left;
+            color         : $color-brand;
+            width         : calc($rate / 1.5);
+        }
+
+        span {
+            color: $color-brand;
+        }
+    }
+
+    .__ice-frame {
+        top  : 0;
+        right: 0;
+    }
+}
+
+section:nth-child(7) {
+    background-color: $color-brand;
+    color           : white;
+    text-align      : center;
+    height          : 1027px;
+
+    h2 {
+        font-size     : 8.211143695014663vw;
+        line-height   : 12.316715542521994vw;
+        letter-spacing: 0em;
+    }
+}

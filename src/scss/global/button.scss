@@ -1,0 +1,32 @@
+.__btn {
+    -webkit-transition: background-color .5s ease 0s;
+    -o-transition     : background-color .5s ease 0s;
+    transition        : background-color .5s ease 0s;
+    display           : -webkit-box;
+    display           : -ms-flexbox;
+    display           : flex;
+    -webkit-box-pack  : center;
+    -ms-flex-pack     : center;
+    justify-content   : center;
+    -webkit-box-align : center;
+    -ms-flex-align    : center;
+    align-items       : center;
+    color             : white;
+    cursor            : pointer;
+    height            : 53px;
+    width             : 150px;
+    left              : 0px;
+    top               : 0px;
+    border-radius     : 10px;
+
+
+    &-nav {
+        background-color: $color-brand;
+        text-transform  : uppercase;
+
+        &:hover,
+        &:focus {
+            background-color: darken($color-brand, $amount: 10);
+        }
+    }
+}

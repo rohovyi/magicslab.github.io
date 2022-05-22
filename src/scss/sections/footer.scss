@@ -1,0 +1,47 @@
+footer {
+    .container {
+        background : url(../../img/bg-font.png) center/cover no-repeat;
+        font-family: $ff__main-l;
+        text-align : center;
+        display    : -ms-grid;
+        display    : grid;
+    }
+
+    h2 {
+        font-size  : 7.038123167155425vw;
+        line-height: 9.824046920821115vw;
+        color      : $color-brand;
+    }
+
+    .__box {
+        display              : -ms-grid;
+        display              : grid;
+        -ms-grid-columns     : repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+
+        &-item {
+            img {
+                width : 160px;
+                height: 160px;
+            }
+
+            .__tel {
+                font-size  : 1.25rem;
+                line-height: 2rem;
+                color      : $color-brand;
+            }
+
+            .__address {
+                font-size  : 1rem;
+                font-style : normal;
+                line-height: 2rem;
+            }
+        }
+    }
+
+    .__copy {
+        font-size  : 21px;
+        line-height: 38px;
+        margin     : $rem*3 auto;
+    }
+}

@@ -1,0 +1,278 @@
+.__nav {
+    background-color     : transparent;
+    display              : -ms-grid;
+    display              : grid;
+    grid-template-areas  : "links logo button";
+    -ms-grid-columns     : 2fr 8fr 2fr;
+    grid-template-columns: 2fr 8fr 2fr;
+    -ms-grid-rows        : 1fr;
+    grid-template-rows   : 1fr;
+    height               : 103px;
+
+    &-logo,
+    &-links,
+    &-button {
+        display          : -webkit-box;
+        display          : -ms-flexbox;
+        display          : flex;
+        -webkit-box-pack : center;
+        -ms-flex-pack    : center;
+        justify-content  : center;
+        -webkit-box-align: center;
+        -ms-flex-align   : center;
+        align-items      : center;
+    }
+
+    &-logo {
+        -ms-grid-row   : 1;
+        -ms-grid-column: 2;
+        grid-area      : logo;
+        font-family    : $ff__main-b;
+        font-size      : 5.865102639296188vw;
+        line-height    : 8.79765395894428vw;
+        letter-spacing : 0em;
+        text-align     : center;
+        color          : $color-brand;
+    }
+
+    &-links {
+        -ms-grid-row   : 1;
+        -ms-grid-column: 1;
+        grid-area      : links;
+
+        &>.__nav-logo,
+        &>.__nav-button {
+            display: none;
+        }
+
+        a {
+            font-family   : $ff__main-b;
+            font-size     : 19px;
+            line-height   : 29px;
+            letter-spacing: 0em;
+            text-align    : left;
+            color         : black;
+
+            &:hover {
+                color: $color-brand;
+            }
+
+            &:first-of-type {
+                margin-right: $rem;
+            }
+        }
+    }
+
+    &-item-active {
+        color: $color-brand !important;
+    }
+
+    &-button {
+        -ms-grid-row   : 1;
+        -ms-grid-column: 3;
+        grid-area      : button;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .__nav {
+
+        &>.__nav-logo,
+        &>.__nav-button {
+            display: none !important;
+        }
+
+        &-links {
+            position             : fixed;
+            display              : initial !important;
+            display              : -ms-grid !important;
+            display              : grid !important;
+            -ms-grid-columns     : 1fr;
+            grid-template-columns: 1fr;
+            -ms-grid-rows        : repeat(4, 1fr);
+            grid-template-rows   : repeat(4, 1fr);
+            width                : $rate;
+            height               : $rate;
+            background           : white;
+            height               : auto;
+            top                  : 0;
+            right                : -$rate;
+            padding              : 0 .5rem;
+            z-index              : 30;
+            overflow-y           : auto;
+            -webkit-transition   : 0.8s;
+            -o-transition        : 0.8s;
+            transition           : 0.8s;
+
+            &.is-hidden {
+                display: none;
+            }
+
+
+            &>.__nav-logo,
+            &>.__nav-button {
+                display: initial;
+            }
+        }
+
+        &-links>*:nth-child(1) {
+            -ms-grid-row   : 1;
+            -ms-grid-column: 1
+        }
+
+        &-links>*:nth-child(2) {
+            -ms-grid-row   : 2;
+            -ms-grid-column: 1
+        }
+
+        &-links>*:nth-child(3) {
+            -ms-grid-row   : 3;
+            -ms-grid-column: 1
+        }
+
+        &-links>*:nth-child(4) {
+            -ms-grid-row   : 4;
+            -ms-grid-column: 1
+        }
+
+        &-logo {
+            -ms-grid-column     : 1;
+            -ms-grid-column-span: 1;
+            grid-column         : 1/2;
+            -ms-grid-row        : 1;
+            -ms-grid-row-span   : 1;
+            grid-row            : 1/2;
+        }
+
+        &-item {
+            -ms-grid-column     : 1;
+            -ms-grid-column-span: 1;
+            grid-column         : 1/2;
+            padding             : $rem 0;
+        }
+
+        &-button {
+            -ms-grid-column     : 1;
+            -ms-grid-column-span: 1;
+            grid-column         : 1/2;
+            -ms-grid-row        : 4;
+            -ms-grid-row-span   : 1;
+            grid-row            : 4/5;
+            display             : -webkit-box !important;
+            display             : -ms-flexbox !important;
+            display             : flex !important;
+            -webkit-box-pack    : end;
+            -ms-flex-pack       : end;
+            justify-content     : end;
+        }
+
+        &-collapse {
+            display          : initial !important;
+            display          : -webkit-box !important;
+            display          : -ms-flexbox !important;
+            display          : flex !important;
+            -webkit-box-pack : end;
+            -ms-flex-pack    : end;
+            justify-content  : end;
+            -webkit-box-align: center;
+            -ms-flex-align   : center;
+            align-items      : center;
+            padding-right    : $rem;
+
+        }
+
+        &_overlay {
+            display : none;
+            position: fixed;
+            top     : 0;
+            left    : 0;
+            width   : 100vw;
+            height  : 100vh;
+            z-index : 10;
+        }
+
+        &-menu_button {
+            position          : fixed;
+            top               : 2rem;
+            right             : 2rem;
+            z-index           : 30;
+            width             : 2rem;
+            height            : 2rem;
+            border-radius     : 50%;
+            background-color  : rgba(255, 255, 255, 0.5);
+            -webkit-transition: 0.4s;
+            -o-transition     : 0.4s;
+            transition        : 0.4s;
+        }
+
+        &-menu_button:hover &-menu_lines {
+            -webkit-filter: brightness(0.7);
+            filter        : brightness(0.7);
+        }
+
+        &-menu_button:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        &-menu_lines::before,
+        &-menu_lines::after,
+        &-menu_lines {
+            position          : absolute;
+            width             : 50px;
+            height            : 3px;
+            background-color  : $color-brand;
+            -webkit-transition: 0.4s;
+            -o-transition     : 0.4s;
+            transition        : 0.4s;
+        }
+
+        &-menu_lines {
+            top              : 50%;
+            left             : 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform    : translate(-50%, -50%);
+            transform        : translate(-50%, -50%);
+        }
+
+        &-menu_lines::before {
+            content: '';
+            top    : -12px;
+        }
+
+        &-menu_lines::after {
+            content: '';
+            top    : 12px;
+        }
+
+
+        &_active &-menu_lines {
+            background-color: transparent;
+        }
+
+        &_active &-menu_lines::before {
+            top              : 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform    : rotate(45deg);
+            transform        : rotate(45deg);
+        }
+
+        &_active &-menu_lines::after {
+            top              : 0;
+            -webkit-transform: rotate(-45deg);
+            -ms-transform    : rotate(-45deg);
+            transform        : rotate(-45deg);
+        }
+
+        &_active &-links {
+            right             : 0;
+            -webkit-transition: 0.4s;
+            -o-transition     : 0.4s;
+            transition        : 0.4s;
+        }
+
+        &_active &_overlay {
+            display         : block;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+}

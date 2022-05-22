@@ -1,0 +1,80 @@
+.swiper {
+    margin: 0 !important;
+
+    &-image {
+        text-align: center;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &-button-prev,
+    &-button-next {
+        position: relative;
+        height  : 6rem !important;
+        width   : 6rem !important;
+
+        &::after {
+            position   : absolute;
+            font-family: none;
+            content    : '' !important;
+            background : url(../../img/svgicons/ice_cream.svg) center/contain no-repeat;
+            height     : $rate;
+            width      : $rate;
+        }
+    }
+
+    &-button-prev {
+        &::after {
+            -webkit-transform: rotate(90deg);
+            -ms-transform    : rotate(90deg);
+            transform        : rotate(90deg);
+        }
+    }
+
+    &-button-next {
+        &::after {
+            -webkit-transform: rotate(-90deg);
+            -ms-transform    : rotate(-90deg);
+            transform        : rotate(-90deg);
+        }
+    }
+}
+
+.swiper-hero {
+
+    &-slide {
+        img {
+            max-height: 494px;
+            height    : $rate;
+            width     : $rate;
+        }
+    }
+}
+
+.swiper-ice {
+    height     : 500px;
+    padding-top: $rem*5;
+
+    &-slide {
+        width: $rate;
+
+        img {
+            max-height: $px*39;
+        }
+    }
+
+    .swiper-pagination {
+
+        &-bullet {
+            border-radius: 0;
+            width        : 1rem;
+            height       : 1rem;
+
+            &-active {
+                background-color: darken($color: white, $amount: 25);
+            }
+        }
+    }
+}

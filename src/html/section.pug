@@ -1,0 +1,98 @@
+.menu
+    .container
+        .swiper 
+            .swiper-container.swiper-hero
+                .swiper-wrapper.swiper-hero-wrapper
+                    .swiper-slide.swiper-hero-slide
+                        img(src='@img/sl-ice_cream-0.png' alt='ice-cream')
+                    .swiper-slide.swiper-hero-slide
+                        img(src='@img/sl-ice_cream-1.png' alt='ice-cream')
+                    .swiper-slide.swiper-hero-slide
+                        img(src='@img/sl-ice_cream-2.png' alt='ice-cream')
+                    .swiper-slide.swiper-hero-slide
+                        img(src='@img/sl-ice_cream-3.png' alt='ice-cream')
+                    .swiper-slide.swiper-hero-slide
+                        img(src='@img/sl-ice_cream-0.png' alt='ice-cream')
+                    .swiper-slide.swiper-hero-slide
+                        img(src='@img/sl-ice_cream-1.png' alt='ice-cream')
+                    .swiper-slide.swiper-hero-slide
+                        img(src='@img/sl-ice_cream-2.png' alt='ice-cream')
+                    .swiper-slide.swiper-hero-slide
+                        img(src='@img/sl-ice_cream-3.png' alt='ice-cream')
+                .swiper-button-prev
+                .swiper-button-next
+section 
+    .container
+        h2 FEATURED IN
+        .__list-brand 
+            - var items = ['food','buzzfeed', 'cosmopolitan','food','buzzfeed', 'cosmopolitan']
+                each item, key in items 
+                    img(src='@img/icons/icons.svg#svgicons--'+items[key] class='svg-svgicons--'+items[key]+'-dims'
+                        alt='svgicons--'+items[key])/
+section 
+    .container
+        -var items = ['girl','ice_cream','girls']
+        -var h2 = ['We only use the highest quality ingredients','Supporting our local farmers','Special flavors added every week']
+        -var p = ['The Slab is based on a simple, nostalgic idea: paying tribute to the original American ice cream parlor – built on quality ice cream, delicious toppings and a fun and inviting experience.','Ice cream with the look and taste of an old favorite. Every bite melts in your mouth to leave a creamy, rich aftertaste. All of this is a direct result of our support for local farms with the best ingredients. Supplied fresh every morning, for every batch.','Participate in our Weekly Magic Flavor competition on Instagram and have your creative flavor added to the menu — for an ENTIRE month! If your flavor is selected, you receive 10 free cones on us!']
+        -var pic = ['girl-0','ice_cream-0','girls-0']
+            each item, key in h2 
+                ul 
+                    li: h2=item
+                    li: p=p[key]
+                    li: img(src="@img/"+pic[key]+".png" alt="ice-cream")
+section 
+    .container 
+        h2 we make ice cream the way it used to be.
+        .__box
+section
+    .container
+        .__title
+            h2 Magic Milkshakes
+        .__text 
+            span Two scoops of magic and one of ice cream?
+            span Introducing delicious milkshakes with our real artisan ice cream.
+        .__ice-frame 
+            p try today
+section 
+    .container 
+        figure 
+            img(src='@img/cream-0.png' alt='ice-cream')
+            .__ice-frame
+                p request a quote
+        .__title 
+            h2 Cater Your Next Event With
+            span Too many parties have an un-magical, sad lack of ice cream. The Magic Slab, where ice cream is handmade with love and attention, is changing that. Come treat your guests or team with the best ice cream you've ever tasted.
+section 
+    .container
+        h2 @THEMAGICSLAB
+        span Put the magic in your feed and follow us on Instagram for updates into our creamy world!
+        .swiper 
+            .swiper-container.swiper-ice
+                .swiper-wrapper.swiper-ice-wrapper
+                    .swiper-slide.swiper-ice-slide
+                        img(src='@img/girls-1.png' alt='ice-cream')
+                    .swiper-slide.swiper-ice-slide
+                        img(src='@img/ice_cream-0.png' alt='ice-cream')
+                    .swiper-slide.swiper-ice-slide
+                        img(src='@img/girl-1.png' alt='ice-cream')
+                    .swiper-slide.swiper-ice-slide
+                        img(src='@img/ice_cream-1.png' alt='ice-cream')
+                    .swiper-slide.swiper-ice-slide
+                        img(src='@img/girls-1.png' alt='ice-cream')
+                    .swiper-slide.swiper-ice-slide
+                        img(src='@img/ice_cream-0.png' alt='ice-cream')
+                    .swiper-slide.swiper-ice-slide
+                        img(src='@img/girl-1.png' alt='ice-cream')
+                    .swiper-slide.swiper-ice-slide
+                        img(src='@img/ice_cream-1.png' alt='ice-cream')
+                    .swiper-slide.swiper-ice-slide
+                        img(src='@img/girls-1.png' alt='ice-cream')
+                    .swiper-slide.swiper-ice-slide
+                        img(src='@img/ice_cream-0.png' alt='ice-cream')
+                    .swiper-slide.swiper-ice-slide
+                        img(src='@img/girl-1.png' alt='ice-cream')
+                    .swiper-slide.swiper-ice-slide
+                        img(src='@img/ice_cream-1.png' alt='ice-cream')
+                .swiper-button-prev
+                .swiper-button-next
+                .swiper-pagination
